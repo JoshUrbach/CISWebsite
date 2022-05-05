@@ -1,0 +1,109 @@
+<!Capstone-Spring-2022!>
+<!-- 
+    Project: CIS Website designed by the Spring 2022 Capstone team
+	
+    Last edited: April 3, 2022
+	
+	File: news.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contact Us</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+		
+	<header>
+		<a href = "index.html"><img src="images/GMercyULogo.jpg" alt = "Gwynedd Mercy Logo"></a>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href= "index.html">Home</a></li>
+			<li><a href= "classes.html">Classes</a></li>
+			<li><a href= "students.html">Students</a></li>
+			<li><a href= "faculty.html">Faculty</a></li>
+			<li><a class = "active" href= "contact.html">Contact Us</a></li>
+		</ul>
+	</nav>	
+			
+	<main>
+		<div id ="form">
+			
+			<h2>Request more information!</h2>
+			
+			<form data-netlify="true" action = "POST" enctype="multipart/form-data" name = "EmailForm">
+			<!-- action = "mailto:fakeemail@yahoo.com" (was going to use this, but netlify gives us a much better way. Could also have done php but that was extremely labor intensive for a simple function -->
+			
+				<fieldset>
+					<legend>Student Information</legend>
+					<label for = "fName">First Name: </label>
+					<input type = "text" id = "fName" name = "fName" autofocus required>
+					
+					<label for = "lName">Last Name: </label>
+					<input type = "text" id = "lName" name = "lName" required>
+					
+					<label for = "email">Email: </label>
+					<input type = "email" id = "email" name = "email" required>
+					
+					<label for = "phone">Phone: </label>
+					<input type = "tel" id = "phone" name = "phone" required>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Additional Information</legend>
+					<label for= "reference">How did you hear about CIS at GMercyU?</label>
+					<select name = "reference" id = "reference">
+						<option value = "friend">Friend</option>
+						<option value = "internet">Internet Search</option>
+						<option value = "ad">Advertisement</option>
+						<option value = "social">Social Media</option>
+						<option value = "advisor">School Advisor</option>
+						<option value = "parent">Parent</option>
+						<option value = "other">Other</option>
+					</select>
+					
+					<label for="objective">What are you most interested in learning about?</label>
+					<select name = "objective" id = "objective">
+						<option value = "program">Program</option>
+						<option value = "general">General Info</option>
+						<option value = "classes">Classes</option>
+						<option value = "other">Other</option>
+					</select>
+					
+					<label for="confirmation">Would you prefer us to text you?</label>
+					<select name = "confirmation" id = "confirmation">
+						<option value = "yes">Yes</option>
+						<option value = "no">No</option>
+					</select>
+					
+					
+					<label for = "comments">Add additional questions here</label>
+					<textarea id = "comments" name = "comments" rows = "10" cols = "50" placeholder="Enter comments here.."></textarea>
+					
+				</fieldset>
+				
+				
+				<div id = "captcha">
+					<div data-netlify-recaptcha="true"></div>
+				</div>
+				<input type = "submit" id = "submit" value = "Submit" class = "btn">
+			</form>
+			
+		</div>
+		
+	</main>
+	
+	<footer>
+		<p id="credits">Designed by: Josh Urbach, Jennifer Eisemann, Joseph Amper, Jacob Dzierzgowski, Kevin Hanuscin, Joseph Duffy, Jake Martell, Eugene Popov</p>
+		<p>Copyright &copy; Gwynedd Mercy University. All rights reserved.</p>
+	</footer>
+		
+</body>
+</html>
