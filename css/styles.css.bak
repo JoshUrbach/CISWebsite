@@ -1,0 +1,686 @@
+/* Capstone 2022 CSS Document*/
+
+/* CSS Reset */
+*{
+    margin:0; 
+    padding:0;
+	border:0;
+	box-sizing: border-box;
+}
+
+/* Frame the page using a red gradient*/
+html{
+	background: linear-gradient(to bottom right, #A6192E, #580e18);
+}
+
+
+body{
+	border: 1px solid #000;
+	border-radius: 5px;
+	margin: 10px 10px;
+	padding: 10px;
+	display:flex;
+	flex-direction: column;
+	width: auto;
+	height: auto;
+	background: #fff;
+	min-height:100vh;
+
+}
+
+/* Styles header(logo)*/
+header img{
+	max-width: 100%;
+	width: 10%;
+	 height: 10%;
+}
+
+/* Main Navigation */
+nav ul{
+	background-color: #A6192E;
+	font-family: Verdana, Georgia;
+	list-style-type: none;
+	margin: 0;
+	text-align: center;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	border: solid 2px #000;
+}
+
+nav li{
+	display: inline-block;
+	font-size: 1.25em;
+	
+}
+
+nav li a{
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 0.5em 1em;
+	text-decoration: none;
+}
+
+nav li a:hover{
+	background-color: #851425;
+}
+
+.active{
+	background-color: #851425;
+}
+
+
+/* main content */
+main{
+	font-family: Georgia;
+	text-align: center;
+	padding: 30px 20px;
+	border-radius: 5px;
+	min-height: 80vh;
+}
+
+/*home page styling*/
+#header{
+	font-size: 2em;
+	font-family: Verdana;
+	text-shadow: 3px 3px #FFB81C;
+	margin: 0 0 1% 0;
+}
+
+#about{
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 3%;
+}
+#about img{
+	border-radius: 50px;
+	border: 3px solid #000;
+}
+#about h3, #news h3{
+	font-size: 2.5em;
+	font-family: Verdana;
+}
+#news{
+	margin: 2% 0 0 0 ;
+}
+#news article{
+	margin: 1% 0 0 0;
+	text-align: left;
+	border: 2px solid #000;
+	border-radius: 10px;
+	padding: 1%;
+	background-color: rgba(83,86,90,.2);
+}
+#news h4{
+	text-align: center;
+	font-size: 1.5em; 
+}
+#news a{
+	text-decoration: none;
+	color: #A6192E;
+	font-weight: bold;
+}
+.headline{
+	margin: 0 0 1% 0;
+	color: #A6192E;
+	font-weight: bold;
+	font-family: Verdana;
+}
+.date{
+	color: #000;
+	margin: 0 0 .5% 0;
+}
+#links{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	margin: 5% 0 0 0;
+}
+#links figure{
+	position: relative;
+	max-width: 306px;
+	max-height: 306px;
+	margin: 2% auto;
+	border: 3px solid #000;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+	
+}
+#links figure a{
+	text-decoration: none;
+	color: #fff;
+	}
+#links figure:hover{
+	opacity: .8;
+	transform: scale(1.05);
+}
+#links figure:hover .pic_cap{
+	transform: scale(1.01);
+}
+.pic_cap{
+	position: absolute;
+	bottom: 0;
+	background: #000;
+	color: #fff;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+#links p{
+	font-size: 1.25em;
+}
+
+
+
+/* style for class descriptions */
+.description{
+	color: #000;
+	/*background: rgba(83,86,90,.2);*/
+	background: linear-gradient(to bottom right, rgba(83,86,90,.2), rgba(83, 86, 90, .4));
+	padding: 2%;
+	margin: 2% 1%;
+	border: 3px solid #000;
+	flex-direction: row;
+	font-size: 1.5em;
+	animation-duration: 1.5s;
+	animation-name: fadein;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: fadein;
+	
+}
+
+article h2{
+	font-family: Verdana;
+	text-shadow: 3px 3px #404040;
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+article h4{
+	font-size: 1.25em;
+}
+
+
+/* style dropdown for classes*/
+
+#dropdown-classes{
+	padding: 1% 0%;
+}
+
+main ul{
+	float: left;
+	font-family: Verdana, Georgia;
+	font-size: .75em;
+	margin: 0% 1%;
+	padding: 0px 10px;
+
+}
+
+main ul li{
+	float: left;
+	list-style: none;
+	position: relative;
+}
+
+main ul li a{
+	font-family: Verdana, Georgia;
+	color: #fff;
+	font-size: 1.2em;
+	padding: 5px 4px;
+	margin: 0px 2px;
+	display:block;
+	text-decoration: none;
+	background-color: #53565A;
+	border-radius: 4px;
+	border: solid 2px #000;
+}
+
+main ul li a:hover{
+	background-color: #000;
+}
+
+main ul li ul{
+	display:none;
+	position: absolute;
+	background-color: #f3f3f3;
+	border-radius: 0px 0px 4px 4px;
+}
+
+main ul li:hover ul{
+	display:block;
+}
+
+main ul li ul li a{
+	border-radius: 4px;
+	color: #000;
+	background-color:#f3f3f3;
+	border: none;
+}
+
+main ul li ul li a{
+	padding: 10px 4px;
+}
+
+main ul li ul li a:hover{
+	background-color: rgba(255, 184, 28, .2);
+}
+
+/* Faculty page CSS */
+.faculty_heading{
+	color: #000;
+	/*text-shadow: 3px 3px #FFB81C;*/
+	text-shadow:
+        0.025em 0 #FFB81C,
+        0 0.025em #FFB81C,
+        -0.025em 0 #FFB81C,
+        0 -0.025em #FFB81C,
+        -0.025em -0.025em #FFB81C,
+        -0.025em 0.025em #FFB81C,
+        0.025em -0.025em #FFB81C,
+        0.025em 0.025em #FFB81C;
+	font-size: 4em;
+	font-family: Verdana;
+	-webkit-animation-duration: 3s;
+	animation-duration: 1.5s;
+	-webkit-animation-name: growshrink;
+	animation-name: growshrink;
+}
+.faculty strong{
+	text-shadow: 1px 1px #FFB81C;
+}
+#cindy{
+	text-shadow: none  ;
+}
+.faculty{
+	flex-direction: row;
+	float: left;
+	color: #000;
+	background: rgba(83,86,90,.15);
+	padding: 2%;
+	margin: 2% 1%;
+	border: 3px solid #000;
+	font-size: 1.5em;
+	animation-duration: 1.5s;
+	animation-name: fadein;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: fadein;
+}
+.faculty h3{
+	clear: left;
+	font-size: 1.5em;
+	font-family: Verdana;
+	text-align: center;
+	text-shadow: 3px 3px #404040;
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+	box-sizing: border-box;
+	border-radius: 5px;	
+}
+.faculty img{
+	height: 20%;
+	width: 20%;
+	float: left;
+	padding: 2% 3% 0 0;
+}
+.faculty p{
+	padding: 10px;
+	text-align: left;
+	font-size: .8em;
+	padding: 2% 3% 0 0;
+}
+.addlinfo{
+	clear: left;
+	text-align: left;
+}
+.faculty a{
+	text-decoration: none;
+	color: #A6192E;
+}
+
+
+/* Style for Contact us page */
+#form{
+	text-align: left;
+	border-radius: 0px;
+	padding: 2%;
+	background: linear-gradient(to bottom right, rgba(83,86,90,.2), rgba(83, 86, 90, .6));
+	width: 80%;
+	margin: 0 auto;
+	border: solid 3px #000;
+	border-radius: 5px;
+}
+ #form h2{
+	 text-align: center;
+	 padding-bottom: 2%;
+	 font-size: 2.5em;
+	 font-family: Verdana;
+	 color: #A6192E;
+	 text-shadow:
+        0.05em 0 white,
+        0 0.05em white,
+        -0.05em 0 white,
+        0 -0.05em white,
+        -0.05em -0.05em white,
+        -0.05em 0.05em white,
+        0.05em -0.05em white,
+        0.05em 0.05em white;
+ }
+ #form fieldset, #form input, #form select, #form textarea{
+	 margin-bottom: 2%;
+ }
+ 
+ #form fieldset{
+	 border: 1px solid #000;
+	 padding: 1%;
+ }
+ 
+ #form fieldset legend{
+	font-weight: bold;
+	font-size:1.25em;
+	font-family: Verdana;
+ }
+ #form input{
+	 padding: .6%;
+	 border-radius: 3px;
+ }
+ #form select{
+	 padding: .3%;
+	 border-radius: 3px;
+ }
+ #form textarea{
+	padding: .3%; 
+ }
+ #form label{
+	 display: block;
+	 padding-top: 1.5%;
+ }
+
+form #submit{
+	padding: 1%;
+	color: #000;
+	background-color: #fff;
+	font-size: 1em;
+	border-radius: 10px;
+	border: solid 2px #A6192E;
+	font-weight: bold;
+	margin: 2% 0 0 0;
+}
+
+form #submit:hover{
+	background-color: #A6192E;
+	color: #fff;
+	border: solid 2px #000;
+}
+
+/* Style student page*/
+
+#student_page{
+	background-color: rgba(83,86,90,.2);
+	padding: 1%;
+	border: solid 3px #000;
+	border-radius: 5px;
+	background-position: center;
+	background-size: cover;
+	animation-duration: 2s;
+	animation-name: fadein;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-name: fadein;
+}
+#student_heading{
+	font-size: 4em;
+	font-family:Verdana;
+	color: #000;
+	text-shadow: 3px 3px #FFB81C;
+	margin: 0 0 1% 0;
+
+}
+#podcasts, #interviews{
+	border: solid 3px #fff;
+	background-color: rgb(0,0,0);
+	border-radius: 50px;
+}
+#podcasts
+{
+	padding: 1% 0 3% 0;
+	margin: 2%;
+	
+}
+#podcasts h1, #interviews h1{
+	font-size: 2.25em;
+	font-family:Verdana;
+	color: #fff;
+}
+#interviews{
+	padding: 1% 0 3% 0;
+	margin: 0 2% 2% 2%;
+}
+h5{
+	color: #fff;
+}
+iframe{
+	border: solid 1px #fff;
+	margin:2%;
+}
+
+/* footer content*/
+footer{
+	font-family: Georgia;
+	text-align: center;
+	background: rgba(255, 184, 28, 0.2);
+	border-radius: 5px;
+	padding: 30px 20px;
+}	
+
+
+
+/*Media Query for Mobile Viewports*/
+@media screen and (max-width: 480px) {
+	header img{
+		max-width: 100%;
+		width: 20%;
+		height: 20%;
+	}
+	body{
+		border: none;
+		border-radius: 0px;
+		margin: 0px;
+		padding: 10px;
+		display:flex;
+		flex-direction: column;
+		width: auto;
+		height: auto;
+		background: #fff;
+		min-height:100vh;
+	}
+	nav ul{
+		border-radius: 0px;
+		border: solid 1px #000;
+	}
+
+	nav li{
+		display: block;
+		font-size: 1.25em;
+	
+	}
+
+	nav li a{
+		display: block;
+		color: #fff;
+		text-align: center;
+		padding: 0.25em 1em;
+		text-decoration: none;
+		border: solid .5px #000;
+	}
+	main{
+		font-size: .55em;
+	}
+	article h2{
+		font-size: 1.1em;
+		text-shadow: 0px 0px; 
+	}
+	article h4{
+		font-size: .95em;
+	}
+	#dropdown-classes{
+		padding: 0% 0% 6% 0%;
+		margin: 0 0 6% 0;
+	}
+	.faculty_heading{
+		font-size: 3em;
+		animation-duration: 0s;
+		-webkit-animation-duration:0s;
+	}
+	#form{
+		width: 100%;
+	}
+	#form textarea{
+		width: 95%;
+	}
+	iframe{
+		height: 85%;
+		width: 85%;
+	}
+	#about{
+		display: block;
+	}
+	#about img{
+		display:none;
+		max-height: 100%;
+		max-width: 100%;
+		border-radius: 5px;
+	}
+	#links
+	{
+		display: block;
+	}
+	footer{
+		font-size: .65em;
+	}
+}
+
+@media screen and (max-width:1005px)
+{
+	#links img{
+		max-width: 225px;
+		max-height: 225px;
+	}
+	#links figure{
+		max-width: 231px; 
+		max-height: 231px;
+	}
+}	
+
+/*Media Query for Tablet Viewport */
+@media screen and (max-width: 965px){
+	#dropdown-classes{
+		padding: 0% 0% 5% 0%;
+	}
+	nav li a:hover{
+		transform: scale(1.03);
+	}
+	.description:hover{
+		transform: scale(1.02);
+		background: rgba(255,184,28,.2);
+	}
+	.faculty:hover{
+		transform: scale(1.02);
+		background: rgba(255,184,28,.2);
+	}
+	.faculty_heading{
+		font-size: 3.5em;
+		animation-duration: 0s;
+		-webkit-animation-duration:0s;
+	}
+	#about{
+		display: block;
+	}
+	#about img{
+		max-height: 202px;
+		max-width: 419px;
+		border-radius: 15px;
+	}
+	#links
+	{
+		
+	}
+}
+
+
+/*Media Query for Desktop Viewport */
+@media screen and (max-width: 1440px){
+	#dropdown-classes{
+		padding: 0% 0% 2% 0%;
+	}
+	nav li a:hover{
+		transform: scale(1.05);
+	}
+	.description:hover{
+		transform: scale(1.02);
+		background: rgba(255,184,28,.2);
+	}
+	.faculty:hover{
+		transform: scale(1.02);
+		background: rgba(255,184,28,.2);
+	}
+	#about img{
+		height: 304px;
+		width: 629px;
+		border-radius: 30px;
+	}
+}
+
+/*Media Query for Larger Desktop Viewports */
+@media screen and (min-width: 1441px){
+	body{
+		width: 1440px;
+		margin: 10px auto;
+	}
+	nav li a:hover{
+		transform: scale(1.1);
+	}
+	.description:hover{
+		transform: scale(1.02);
+		background: rgba(255,184,28,.2);
+	}
+	.faculty:hover{
+		transform: scale(1.02);
+		background: rgba(255,184,28,.2);
+	}
+}
+
+/* css animation to fade in an element */
+@-webkit-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes fadein{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+/* Grow then shrink animation */
+
+@-webkit-keyframes growshrink{
+	0% { font-size: 3em; }
+	50% { font-size: 4.25em; }
+	100% { font-size: 4em; }
+}
+@keyframes growshrink{
+	0% { font-size: 3em; }
+	50% { font-size: 4.25em; }
+	100% { font-size: 4em; }
+}
